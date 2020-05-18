@@ -3,6 +3,7 @@ using BillingManagement.Models;
 using BillingManagement.UI.ViewModels.Commands;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Linq;
 
 namespace BillingManagement.UI.ViewModels
 {
@@ -71,6 +72,12 @@ namespace BillingManagement.UI.ViewModels
 
 
 
+        public void ShowSearchResult(ObservableCollection<Customer> result)
+        {
+            Customers = result;
+            SelectedCustomer = Customers.First();
+           // SelectedCustomer.Invoices = invoices;
+        }
 
 
     }

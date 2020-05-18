@@ -7,6 +7,7 @@ namespace BillingManagement.Models
 {
     public class Customer : INotifyPropertyChanged
     {
+        private int customerID;
         private string name;
         private string lastName;
         private string address;
@@ -19,6 +20,16 @@ namespace BillingManagement.Models
         private ObservableCollection<Invoice> invoices = new ObservableCollection<Invoice>();
 
         #region Property definitions
+
+        public int CustomerID
+        {
+            get => customerID;
+            private set
+            {
+                customerID = value;
+                OnPropertyChanged();
+            }
+        }
         public string Name
         {
             get => name;
