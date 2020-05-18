@@ -120,7 +120,7 @@ namespace BillingManagement.UI.ViewModels
 
 			VM = customerViewModel;
 
-
+			Exit = new DelegateCommand<object>(Exit_Click);
 
 		}
 
